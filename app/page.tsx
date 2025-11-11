@@ -38,11 +38,11 @@ export default function LoginPage() {
   }
 
   return (
-    <main className="min-h-screen flex items-center justify-center bg-white">
+    <main className="h-screen flex items-center justify-center bg-white overflow-hidden">
 
-      <div className="w-full h-full max-w-7xl mx-auto px-4 py-8">
+      <div className="w-full h-full max-w-7xl mx-auto px-4">
         {/* Desktop Layout: Two-column split */}
-        <div className="hidden lg:grid lg:grid-cols-2 lg:gap-12 lg:items-stretch lg:min-h-[calc(100vh-4rem)]">
+        <div className="hidden lg:grid lg:grid-cols-2 lg:gap-12 lg:items-stretch lg:min-h-screen">
           {/* Left Section: Full Image */}
           <div className="flex items-center justify-center h-full overflow-hidden rounded-2xl border-2 border-gray-200">
             <img
