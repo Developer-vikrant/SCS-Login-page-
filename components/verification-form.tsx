@@ -64,18 +64,18 @@ export function VerificationForm({ onSubmit, isLoading = false }: VerificationFo
             Name
           </label>
           <Input
-  id="name"
-  type="text"
-  placeholder="Enter your full name"
-  {...register("name")}
-  disabled={isProcessing}
-  autoComplete="off"
-  autoCorrect="off"
-  spellCheck={false}
-  className="rounded-lg focus-visible:ring-2 focus-visible:ring-indigo-300 focus-visible:border-indigo-400 transition"
-  aria-invalid={!!errors.name}
-  aria-describedby={errors.name ? "name-error" : undefined}
-/>
+            id="name"
+            type="text"
+            placeholder="Enter your full name"
+            {...register("name")}
+            disabled={isProcessing}
+            autoComplete="off"
+            autoCorrect="off"
+            spellCheck={false}
+            className="rounded-lg focus-visible:ring-2 focus-visible:ring-indigo-300 focus-visible:border-indigo-400 transition"
+            aria-invalid={!!errors.name}
+            aria-describedby={errors.name ? "name-error" : undefined}
+          />
           {errors.name && (
             <p id="name-error" className="text-sm text-red-600 mt-1" role="alert">
               {errors.name.message}
@@ -94,7 +94,10 @@ export function VerificationForm({ onSubmit, isLoading = false }: VerificationFo
             placeholder="10-digit mobile or +91 format"
             {...register("contact")}
             disabled={isProcessing}
-            className="rounded-lg"
+            autoComplete="off"
+            autoCorrect="off"
+            spellCheck={false}
+            className="rounded-lg focus-visible:ring-2 focus-visible:ring-indigo-300 focus-visible:border-indigo-400 transition"
             aria-invalid={!!errors.contact}
             aria-describedby={errors.contact ? "contact-error" : undefined}
           />
@@ -116,7 +119,10 @@ export function VerificationForm({ onSubmit, isLoading = false }: VerificationFo
             placeholder="Enter your email address"
             {...register("email")}
             disabled={isProcessing}
-            className="rounded-lg"
+            autoComplete="off"
+            autoCorrect="off"
+            spellCheck={false}
+            className="rounded-lg focus-visible:ring-2 focus-visible:ring-indigo-300 focus-visible:border-indigo-400 transition"
             aria-invalid={!!errors.email}
             aria-describedby={errors.email ? "email-error" : undefined}
           />
