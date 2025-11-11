@@ -38,27 +38,46 @@ export default function LoginPage() {
   }
 
   return (
-    <main className="relative h-screen flex items-center justify-center bg-white overflow-hidden">
+    <main className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#f4f8ff] via-white to-[#f4f8ff]">
 
      {/* LEFT side icons */}
-<div className="hidden lg:block absolute left-8 inset-y-0">
+<div className="hidden lg:block absolute left-12 inset-y-0">
   {/* top */}
-  <Headset size={38} className="absolute top-[20%] opacity-60" />
+  <Headset
+    size={38}
+    className="absolute top-[20%] opacity-60 transition-all duration-200 hover:scale-110"
+  />
   {/* center */}
-  <MessageSquare size={38} className="absolute top-1/2 -translate-y-1/2 opacity-60" />
+  <MessageSquare
+    size={38}
+    className="absolute top-1/2 -translate-y-1/2 opacity-60 transition-all duration-200 hover:scale-110"
+  />
   {/* bottom */}
-  <PhoneCall size={38} className="absolute bottom-[20%] opacity-60" />
+  <PhoneCall
+    size={38}
+    className="absolute bottom-[20%] opacity-60 transition-all duration-200 hover:scale-110"
+  />
 </div>
 
 {/* RIGHT side icons */}
-<div className="hidden lg:block absolute right-8 inset-y-0">
+<div className="hidden lg:block absolute right-12 inset-y-0">
   {/* top */}
-  <Headset size={38} className="absolute top-[20%] opacity-60" />
+  <Headset
+    size={38}
+    className="absolute top-[20%] opacity-60 transition-all duration-200 hover:scale-110"
+  />
   {/* center */}
-  <MessageSquare size={38} className="absolute top-1/2 -translate-y-1/2 opacity-60" />
+  <MessageSquare
+    size={38}
+    className="absolute top-1/2 -translate-y-1/2 opacity-60 transition-all duration-200 hover:scale-110"
+  />
   {/* bottom */}
-  <PhoneCall size={38} className="absolute bottom-[20%] opacity-60" />
+  <PhoneCall
+    size={38}
+    className="absolute bottom-[20%] opacity-60 transition-all duration-200 hover:scale-110"
+  />
 </div>
+
 
 
 
