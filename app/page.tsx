@@ -39,20 +39,27 @@ export default function LoginPage() {
 
   return (
     <main className="relative h-screen flex items-center justify-center bg-white overflow-hidden">
-      
-      {/* left icons */}
-<div className="hidden lg:flex flex-col gap-6 absolute left-8 top-1/2 -translate-y-1/2 opacity-50">
-  <Headset size={28} />
-  <MessageSquare size={28} />
-  <PhoneCall size={28} />
+
+     {/* LEFT side icons */}
+<div className="hidden lg:block absolute left-8 inset-y-0">
+  {/* top */}
+  <Headset size={38} className="absolute top-[20%] opacity-60" />
+  {/* center */}
+  <MessageSquare size={38} className="absolute top-1/2 -translate-y-1/2 opacity-60" />
+  {/* bottom */}
+  <PhoneCall size={38} className="absolute bottom-[20%] opacity-60" />
 </div>
 
-{/* right icons */}
-<div className="hidden lg:flex flex-col gap-6 absolute right-8 top-1/2 -translate-y-1/2 opacity-50">
-  <Headset size={28} />
-  <MessageSquare size={28} />
-  <PhoneCall size={28} />
+{/* RIGHT side icons */}
+<div className="hidden lg:block absolute right-8 inset-y-0">
+  {/* top */}
+  <Headset size={38} className="absolute top-[20%] opacity-60" />
+  {/* center */}
+  <MessageSquare size={38} className="absolute top-1/2 -translate-y-1/2 opacity-60" />
+  {/* bottom */}
+  <PhoneCall size={38} className="absolute bottom-[20%] opacity-60" />
 </div>
+
 
 
       <div className="w-full h-full max-w-7xl mx-auto px-4">
