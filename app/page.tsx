@@ -134,12 +134,12 @@ export default function LoginPage() {
         <div className="lg:hidden flex flex-col gap-8">
           {/* Header */}
           <div className="space-y-4">
-            <div
-              className="inline-flex items-center justify-center w-12 h-12 rounded-full"
-              style={{ backgroundColor: "rgb(46, 125, 50)" }}
-            >
-              <Lock className="w-6 h-6 text-white" />
-            </div>
+            {/* Glass gradient ring badge */}
+<div className="relative p-[2px] w-14 h-14 rounded-full bg-gradient-to-br from-emerald-500/60 to-indigo-500/60 shadow-md">
+  <div className="flex items-center justify-center w-full h-full rounded-full bg-white/80 backdrop-blur">
+    <Lock className="w-6 h-6 text-emerald-700" />
+  </div>
+</div>
             <div className="space-y-2">
               <h1 className="text-3xl font-bold" style={{ color: "rgb(46, 125, 50)" }}>
                 Verify Your Identity
