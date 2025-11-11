@@ -4,7 +4,7 @@ import { VerificationForm } from "@/components/verification-form"
 import { useToast } from "@/hooks/use-toast"
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import { Lock, CheckCircle2 } from "lucide-react"
+import { Lock, CheckCircle2, Headset, MessageSquare, PhoneCall } from "lucide-react"
 
 export default function LoginPage() {
   const router = useRouter()
@@ -38,7 +38,22 @@ export default function LoginPage() {
   }
 
   return (
-    <main className="h-screen flex items-center justify-center bg-white overflow-hidden">
+    <main className="relative h-screen flex items-center justify-center bg-white overflow-hidden">
+      
+      {/* left icons */}
+<div className="hidden lg:flex flex-col gap-6 absolute left-8 top-1/2 -translate-y-1/2 opacity-50">
+  <Headset size={28} />
+  <MessageSquare size={28} />
+  <PhoneCall size={28} />
+</div>
+
+{/* right icons */}
+<div className="hidden lg:flex flex-col gap-6 absolute right-8 top-1/2 -translate-y-1/2 opacity-50">
+  <Headset size={28} />
+  <MessageSquare size={28} />
+  <PhoneCall size={28} />
+</div>
+
 
       <div className="w-full h-full max-w-7xl mx-auto px-4">
         {/* Desktop Layout: Two-column split */}
