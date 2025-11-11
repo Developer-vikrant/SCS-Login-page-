@@ -38,24 +38,24 @@ export default function LoginPage() {
   }
 
   return (
-    <main className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#f4f8ff] via-white to-[#f4f8ff]">
+    <main className="relative min-h-screen lg:h-screen flex items-center justify-center bg-gradient-to-br from-[#f4f8ff] via-white to-[#f4f8ff] lg:overflow-hidden">
 
      {/* LEFT side icons */}
 <div className="hidden lg:block absolute left-12 inset-y-0">
   {/* top */}
   <Headset
     size={38}
-    className="absolute top-[20%] opacity-60 transition-all duration-200 hover:scale-110"
+    className="absolute top-[20%] opacity-60 transition-all duration-200 hover:scale-110 hover:shadow-[0_0_22px_rgba(99,102,241,0.45)]"
   />
   {/* center */}
   <MessageSquare
     size={38}
-    className="absolute top-1/2 -translate-y-1/2 opacity-60 transition-all duration-200 hover:scale-110"
+    className="absolute top-1/2 -translate-y-1/2 opacity-60 transition-all duration-200 hover:scale-110 hover:shadow-[0_0_22px_rgba(99,102,241,0.45)]"
   />
   {/* bottom */}
   <PhoneCall
     size={38}
-    className="absolute bottom-[20%] opacity-60 transition-all duration-200 hover:scale-110"
+    className="absolute bottom-[20%] opacity-60 transition-all duration-200 hover:scale-110 hover:shadow-[0_0_22px_rgba(99,102,241,0.45)]"
   />
 </div>
 
@@ -64,22 +64,19 @@ export default function LoginPage() {
   {/* top */}
   <Headset
     size={38}
-    className="absolute top-[20%] opacity-60 transition-all duration-200 hover:scale-110"
+    className="absolute top-[20%] opacity-60 transition-all duration-200 hover:scale-110 hover:shadow-[0_0_22px_rgba(99,102,241,0.45)]"
   />
   {/* center */}
   <MessageSquare
     size={38}
-    className="absolute top-1/2 -translate-y-1/2 opacity-60 transition-all duration-200 hover:scale-110"
+    className="absolute top-1/2 -translate-y-1/2 opacity-60 transition-all duration-200 hover:scale-110 hover:shadow-[0_0_22px_rgba(99,102,241,0.45)]"
   />
   {/* bottom */}
   <PhoneCall
     size={38}
-    className="absolute bottom-[20%] opacity-60 transition-all duration-200 hover:scale-110"
+    className="absolute bottom-[20%] opacity-60 transition-all duration-200 hover:scale-110 hover:shadow-[0_0_22px_rgba(99,102,241,0.45)]"
   />
 </div>
-
-
-
 
       <div className="w-full h-full max-w-7xl mx-auto px-4">
         {/* Desktop Layout: Two-column split */}
