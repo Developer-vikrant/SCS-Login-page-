@@ -141,9 +141,9 @@ export default function LoginPage() {
   </div>
 </div>
             <div className="space-y-2">
-              <h1 className="text-3xl font-bold" style={{ color: "rgb(46, 125, 50)" }}>
-                Verify Your Identity
-              </h1>
+             <h1 className="text-4xl font-extrabold tracking-tight bg-gradient-to-r from-emerald-700 to-indigo-700 bg-clip-text text-transparent">
+  Verify Your Identity
+</h1>
               <p className="text-sm text-gray-600 leading-relaxed">
                 We're here to assist you and ensure you get the right solution as quickly as possible.
               </p>
@@ -165,15 +165,15 @@ export default function LoginPage() {
           {/* Footer with trust indicators */}
           <div className="space-y-3 pb-4">
             <div className="flex items-start gap-3">
-              <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: "rgb(46, 125, 50)" }} />
+              <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5 text-emerald-600" />
               <span className="text-sm text-gray-600">Your information is secure and encrypted</span>
             </div>
             <div className="flex items-start gap-3">
-              <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: "rgb(46, 125, 50)" }} />
+              <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5 text-emerald-600" />
               <span className="text-sm text-gray-600">Fast and seamless verification process</span>
             </div>
             <div className="flex items-start gap-3">
-              <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: "rgb(46, 125, 50)" }} />
+              <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5 text-emerald-600" />
               <span className="text-sm text-gray-600">24/7 customer support available</span>
             </div>
           </div>

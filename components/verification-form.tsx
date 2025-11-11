@@ -55,24 +55,27 @@ export function VerificationForm({ onSubmit, isLoading = false }: VerificationFo
   }
 
   return (
-    <form onSubmit={handleSubmit(onFormSubmit)} className="space-y-6" noValidate>
+    <form onSubmit={handleSubmit(onFormSubmit)} className="space-y-6" noValidate autoComplete="off">
       {/* Card Container */}
-      <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm space-y-5">
+      <div className="bg-white/90 backdrop-blur rounded-2xl border border-gray-200 p-6 shadow-md space-y-5">
         {/* Name Field */}
         <div className="space-y-2">
           <label htmlFor="name" className="text-sm font-medium text-gray-700">
             Name
           </label>
           <Input
-            id="name"
-            type="text"
-            placeholder="Enter your full name"
-            {...register("name")}
-            disabled={isProcessing}
-            className="rounded-lg"
-            aria-invalid={!!errors.name}
-            aria-describedby={errors.name ? "name-error" : undefined}
-          />
+  id="name"
+  type="text"
+  placeholder="Enter your full name"
+  {...register("name")}
+  disabled={isProcessing}
+  autoComplete="off"
+  autoCorrect="off"
+  spellCheck={false}
+  className="rounded-lg focus-visible:ring-2 focus-visible:ring-indigo-300 focus-visible:border-indigo-400 transition"
+  aria-invalid={!!errors.name}
+  aria-describedby={errors.name ? "name-error" : undefined}
+/>
           {errors.name && (
             <p id="name-error" className="text-sm text-red-600 mt-1" role="alert">
               {errors.name.message}
