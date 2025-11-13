@@ -14,12 +14,32 @@ export default function LoginPage() {
   const handleVerify = async (data: { name: string; contact: string; email: string }) => {
     setIsSubmitting(true)
     try {
-      // Simulate API call for identity verification
-      await new Promise((resolve) => setTimeout(resolve, 2000))
+      const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:8000"
+      const response = await fetch(`${backendUrl}/validate-users`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          phone_number: data.contact, // Map frontend 'contact' to backend 'phone_number'
+        }),
+      })
+
+      if (!response.ok) {
+        const errorData = await response.json()
+        const errorMessage = Array.isArray(errorData.detail)
+          ? errorData.detail.join(", ")
+          : errorData.detail || "Verification failed"
+        throw new Error(errorMessage)
+      }
+
+      const result = await response.json()
 
       toast({
         title: "Identity Verified",
-        description: "Welcome to Smart Support. Redirecting to dashboard...",
+        description: result.message || "Welcome to Smart Support. Redirecting to dashboard...",
       })
 
       // Redirect to landing page after successful verification
@@ -27,11 +47,13 @@ export default function LoginPage() {
         router.push("/dashboard")
       }, 1500)
     } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : "Verification failed. Please try again."
       toast({
         title: "Verification Failed",
-        description: "Please check your details and try again.",
+        description: errorMessage,
         variant: "destructive",
       })
+      throw error
     } finally {
       setIsSubmitting(false)
     }
